@@ -14,6 +14,8 @@ function medusa_http()
     elseif target_choice == "2" then
         io.write("Enter path to file list of target IP: ")
         file_target = io.read()
+    elseif target_choice == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -31,6 +33,8 @@ function medusa_http()
     elseif user_value == "2" then
         io.write("Enter target username: ")
         username = io.read()
+    elseif user_value == "quit" then
+        os.exit(0)
     else
         print("Invalid input value")
         os.exit(0)
@@ -48,6 +52,8 @@ function medusa_http()
     elseif pass_value == "2" then
         io.write("Enter password text: ")
         password = io.read()
+    elseif pass_value == "quit" then
+        os.exit(0)
     else 
         print("Invalid input value..!!")
         os.exit(0)
@@ -93,6 +99,8 @@ function medusa_ssh()
     elseif target_choice == "2" then
         io.write("Enter path to file list of target IP: ")
         file_target = io.read()
+    elseif target_choice == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -110,6 +118,8 @@ function medusa_ssh()
     elseif user_value == "2" then
         io.write("Enter target username: ")
         username = io.read()
+    elseif user_value == "quit" then
+        os.exit(0)
     else
         print("Invalid input value")
         os.exit(0)
@@ -127,6 +137,8 @@ function medusa_ssh()
     elseif pass_value == "2" then
         io.write("Enter password text: ")
         password = io.read()
+    elseif pass_value == "quit" then
+        os.exit(0)
     else 
         print("Invalid input value..!!")
         os.exit(0)
@@ -169,6 +181,8 @@ function medusa_ftp()
     elseif target_choice == "2" then
         io.write("Enter path to file list of target IP: ")
         file_target = io.read()
+    elseif target_choice == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -186,6 +200,8 @@ function medusa_ftp()
     elseif user_value == "2" then
         io.write("Enter target username: ")
         username = io.read()
+    elseif user_value == "quit" then
+        os.exit(0)
     else
         print("Invalid input value")
         os.exit(0)
@@ -203,6 +219,8 @@ function medusa_ftp()
     elseif pass_value == "2" then
         io.write("Enter password text: ")
         password = io.read()
+    elseif pass_value == "quit" then
+        os.exit(0)
     else 
         print("Invalid input value..!!")
         os.exit(0)

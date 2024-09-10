@@ -13,6 +13,8 @@ function ncrack_http()
     elseif value_user == "2" then
         io.write("Enter target username: ") 
         username = io.read()
+    elseif value_user == "quit" then
+        os.exit(0)
     else 
         print("Invalid choice value..!!")
         os.exit(0)
@@ -29,6 +31,8 @@ function ncrack_http()
     elseif value_pass == "2"  then
         io.write("Enter password text to use: ")
         password = io.read()
+    elseif value_pass == "quit" then
+        os.exit(0)
     else
         print("Invalid choice value..!!")
         os.exit(0)
@@ -68,6 +72,8 @@ function ncrack_ssh()
     elseif value_user == "2" then
         io.write("Enter target username: ") 
         username = io.read()
+    elseif value_user == "quit" then
+        os.exit(0)
     else 
         print("Invalid choice value..!!")
         os.exit(0)
@@ -84,6 +90,8 @@ function ncrack_ssh()
     elseif value_pass == "2"  then
         io.write("Enter password text to use: ")
         password = io.read()
+    elseif value_pass == "quit" then
+        os.exit(0)
     else
         print("Invalid choice value..!!")
         os.exit(0)
@@ -122,6 +130,8 @@ function ncrack_ftp()
     elseif value_user == "2" then
         io.write("Enter target username: ") 
         username = io.read()
+    elseif value_user == "quit" then 
+        os.exit(0)
     else 
         print("Invalid choice value..!!")
         os.exit(0)
@@ -138,6 +148,8 @@ function ncrack_ftp()
     elseif value_pass == "2"  then
         io.write("Enter password text to use: ")
         password = io.read()
+    elseif value_pass == "quit" then 
+        os.exit(0)
     else
         print("Invalid choice value..!!")
         os.exit(0)

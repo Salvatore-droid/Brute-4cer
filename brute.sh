@@ -56,6 +56,8 @@ function hydra_list()
         line()
         io.write("\n")
         hydra_ftp()
+    elseif hydra_usage == "quit" then
+        os.exit(0)
     else
         print("Invalid value option..!!")
         os.exit(0)
@@ -86,6 +88,8 @@ function medusa_list()
         line()
         io.write("\n")
         medusa_ftp()
+    elseif medusa_usage == "quit" then
+        os.exit(0)
     else
         print("Invalid value optio..!!")
         os.exit(0)
@@ -117,6 +121,8 @@ function ncrack_list()
         line()
         io.write("\n")
         ncrack_ftp()
+    elseif ncrack_usage == "quit" then
+        os.exit(0)
     else
         print("Invalid value optio..!!")
         os.exit(0)
@@ -148,6 +154,8 @@ function tools()
     elseif tool == "3" then
         asterisk()
         ncrack_list()
+    elseif tool == "quit" then
+        os.exit(0)
     else
         print("Tool value ["..tool.."] is not available..!!")
     end    

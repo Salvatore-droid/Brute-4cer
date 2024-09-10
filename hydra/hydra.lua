@@ -12,6 +12,8 @@ function hydra_http()
     elseif value_user == "2" then
         io.write("Enter username: ")
         username = io.read()
+    elseif value_user == "quit" then 
+        os.exit(0)
     else
         print("Invalid value..!!")
         os.exit(0)
@@ -27,6 +29,8 @@ function hydra_http()
     elseif value == "2" then
         io.write("Enter password text: ")
         password = io.read()
+    elseif value ==  "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -87,6 +91,8 @@ function hydra_ssh()
     elseif value_pass == "2" then
         io.write("Enter the password text: ")
         ssh_passwd = io.read()
+    elseif value_pass == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -128,6 +134,8 @@ function hydra_ftp()
     elseif value == "2" then
         io.write("Enter target username: ")
         ftp_user = io.read()
+    elseif value == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
@@ -144,6 +152,8 @@ function hydra_ftp()
     elseif value_pass == "2" then
         io.write("Enter the password text: ")
         ftp_passwd = io.read()
+    elseif value_pass == "quit" then
+        os.exit(0)
     else
         print("Invalid input value..!!")
         os.exit(0)
