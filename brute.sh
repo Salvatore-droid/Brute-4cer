@@ -1,3 +1,4 @@
+#!/usr/bin/env lua
 require("hydra.hydra")
 require("medusa.medusa")
 require("ncrack.ncrack")
