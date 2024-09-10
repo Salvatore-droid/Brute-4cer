@@ -2,6 +2,7 @@
 require("hydra.hydra")
 require("medusa.medusa")
 require("ncrack.ncrack")
+local ansicolors = require("ansicolors")
 
 
 
@@ -9,11 +10,11 @@ require("ncrack.ncrack")
 
 
 function banner()
-    os.execute("figlet -f slant Brute-4c3r")
-    print("[[- Brute-forcer v-1.0 -]]")
-    print("[[* github.com/Britania-maker -]]")
-    print("[[* github.com/Salvatore-droid -]]")
-    print("[[- Created by Brightone and Genius -]]\n")
+    os.execute("tput setaf 1; figlet -f slant Brute-4c3r; tput sgr0")
+    print(ansicolors("%{yellow}[[- Brute-forcer v-1.0 -]]%{reset}"))
+    print(ansicolors("%{yellow}[[* github.com/Britania-maker -]]%{reset}"))
+    print(ansicolors("%{yellow}[[* github.com/Salvatore-droid -]]%{reset}"))
+    print(ansicolors("%{yellow}[[- Created by Brightone and Genius -]]\n%{reset}"))
 
 end
 
@@ -38,11 +39,11 @@ end
 
 function hydra_list()
     print("\n")
-    print([[[1] Hydra to brute http.
+    print(ansicolors[[%{blue}[1] Hydra to brute http.
 [2] Hydra to brute ssh.
 [3] Hydra to brute ftp.
-    ]])
-    io.write("Enter value option for Hydra brute usage: ")
+    %{reset}]])
+    io.write(ansicolors("%{cyan}Enter value option for Hydra brute usage: %{reset}"))
     local hydra_usage = io.read()
     if hydra_usage == "1" then
         line()
@@ -59,7 +60,7 @@ function hydra_list()
     elseif hydra_usage == "quit" then
         os.exit(0)
     else
-        print("Invalid value option..!!")
+        print(ansicolors("%{red}Invalid value option..!!%{reset}"))
         os.exit(0)
     end
 end
@@ -70,11 +71,11 @@ end
 
 function medusa_list()
     print("\n")
-    print([[[1] Medusa to brute http.
+    print(ansicolors[[%{blue}[1] Medusa to brute http.
 [2] Medusa to brute ssh.
 [3] Medusa to brute ftp.
-    ]])
-    io.write("Enter value option for medusa brute usage: ")
+    %{reset}]])
+    io.write(ansicolors("%{cyan}Enter value option for medusa brute usage: %{reset}"))
     local medusa_usage = io.read()
     if medusa_usage == "1" then
         line()
@@ -91,7 +92,7 @@ function medusa_list()
     elseif medusa_usage == "quit" then
         os.exit(0)
     else
-        print("Invalid value optio..!!")
+        print(ansicolors("%{red}Invalid value option..!!%{reset}"))
         os.exit(0)
     end
 end
@@ -103,11 +104,11 @@ end
 
 function ncrack_list()
     print("\n")
-    print([[[1] Ncrack to brute http.
+    print(ansicolors[[%{blue}[1] Ncrack to brute http.
 [2] Ncrack to brute ssh.
 [3] Ncrack to brute ftp.
-    ]])
-    io.write("Enter value option for ncrack brute usage: ")
+    %{reset}]])
+    io.write(ansicolors("%{cyan}Enter value option for ncrack brute usage: %{reset}"))
     local ncrack_usage = io.read()
     if ncrack_usage == "1" then
         line()
@@ -124,7 +125,7 @@ function ncrack_list()
     elseif ncrack_usage == "quit" then
         os.exit(0)
     else
-        print("Invalid value optio..!!")
+        print(ansicolors("%{red}Invalid value option..!!%{reset}"))
         os.exit(0)
     end
 end
@@ -135,15 +136,15 @@ end
 
 
 function tools()
-    print("Enter quit as input at anyplace to terminate the program.")
+    print(ansicolors("%{blue}Enter quit as input at anyplace to terminate the program.%{reset}"))
     print("\n")
-    print("Select the Brute-forcing tool to use:")
-    print([[
+    print(ansicolors("%{yellow}Select the Brute-forcing tool to use:%{reset}"))
+    print(ansicolors[[%{blue}
 [1] Hydra
 [2] Medusa
 [3] Ncrack
-]])
-    io.write("Enter value for tool selection: ")
+%{reset}]])
+    io.write(ansicolors("%{cyan}Enter value for tool selection: %{reset}"))
     local tool = io.read()
     if tool == "1" then
         asterisk()
@@ -157,7 +158,7 @@ function tools()
     elseif tool == "quit" then
         os.exit(0)
     else
-        print("Tool value ["..tool.."] is not available..!!")
+        print(ansicolors("%{red}Tool value ["..tool.."] is not available..!!%{reset}"))
     end    
 end
 
@@ -175,4 +176,3 @@ function main()
 end
 
 main()
-
